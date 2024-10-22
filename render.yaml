@@ -1,0 +1,9 @@
+version: 1
+services:
+  - type: web
+    name: my-web-service
+    env: php
+    buildCommand: |
+      curl -sSL https://getcomposer.org/installer | php
+      php composer.phar install
+    startCommand: php -S 0.0.0.0:10000 -t server
