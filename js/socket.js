@@ -1,5 +1,5 @@
 // Cambia esta URL por la dirección de tu servidor WebSocket en línea
-const socket = new WebSocket("wss://socket-production-8f96.up.railway.app");
+const socket = new WebSocket("ws://socket-production-8f96.up.railway.app");
 
 socket.onopen = () => {
     console.log("Connected");
