@@ -55,7 +55,7 @@ $server = IoServer::factory(
             new Chat()
         )
     ),
-    $port
+    port: 8080
 );
 
 $server->run();
