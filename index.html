@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <h1>Socket</h1>
-    <div class="chat">
-        <div class="messages" id="messages"></div>
-        <div class="send-message">
-            <input type="text" class="message" id="message">
-            <button class="send" type="button" id="send">Send</button>
-        </div>
-    </div>
 
-    <script src="js/socket.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+</head>
+
+<body>
+  <div id="notifications-container"></div>
+  <h1>Socket</h1>
+  <div class="chat" id="chat">
+    <div class="encabezado"><strong>Chat</strong></div>
+    <div class="messages" id="messages"></div>
+    <div class="send-message">
+      <input type="text" class="message" id="message">
+      <button class="send" type="button" id="send" disabled><img src="enviar.png" alt="" width="25"></button>
+    </div>
+    <span id="salir" onclick="mostrarChat()" class="salir">X</span> <!-- Círculo de notificación -->
+
+  </div>
+  <button onclick="mostrarChat()" class="botonChat">
+    <img src="chat.png" alt="" width="60">
+    <span id="notification" class="notification"></span> <!-- Círculo de notificación -->
+  </button>
+
+
+  <script src="js/socket.js"></script>
+  <script src="js/mostrarChat.js"></script>
+  <script src="../bootstrap/js/bootstrap.js"></script>
 </body>
+
 </html>
